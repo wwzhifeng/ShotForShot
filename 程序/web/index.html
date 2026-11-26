@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>王知风 H3 导演台 · 爆款复刻版</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="brand"><b>王知风<i>H3</i>导演台</b><span class="edition">爆款复刻版</span></div>
+  <button class="proj" id="projBtn" aria-haspopup="true" aria-expanded="false"><span id="projName">还没有作品</span><i data-ico="chev"></i></button>
+  <div class="bar-r">
+    <span class="sim" id="simPill" hidden></span>
+    <span class="spend" id="spend"></span>
+    <button class="tbtn" id="setBtn"><i data-ico="sliders"></i>设置</button>
+  </div>
+</header>
+<div class="menu" id="projMenu" hidden></div>
+
+<main class="page" id="page">
+  <div class="intro"><h1>照着一条爆款，拍一条你自己的</h1><span>换人、换台词，节奏不变。从上往下六步，每一步只看右下角那个按钮。</span></div>
+
+  <section class="step" id="s1" data-s="open">
+    <button class="step-head"><span class="step-num"><span>1</span><i data-ico="check"></i></span><span class="step-title">传原片</span><span class="step-sum"></span><span class="step-edit">展开<i data-ico="chev"></i></span></button>
+    <div class="step-wrap"><div class="step-body"><div class="step-in" id="s1in"></div></div></div>
+  </section>
+
+  <section class="step" id="s2" data-s="locked">
+    <button class="step-head"><span class="step-num"><span>2</span><i data-ico="check"></i></span><span class="step-title">AI 拉片表</span><span class="step-sum"></span><span class="step-edit">展开<i data-ico="chev"></i></span></button>
+    <div class="step-wrap"><div class="step-body"><div class="step-in" id="s2in"></div></div></div>
+  </section>
+
+  <section class="step" id="s3" data-s="locked">
+    <button class="step-head"><span class="step-num"><span>3</span><i data-ico="check"></i></span><span class="step-title">换成你的</span><span class="step-sum"></span><span class="step-edit">展开<i data-ico="chev"></i></span></button>
+    <div class="step-wrap"><div class="step-body"><div class="step-in" id="s3in"></div></div></div>
+  </section>
+
+  <section class="step" id="s4" data-s="locked">
+    <button class="step-head"><span class="step-num"><span>4</span><i data-ico="check"></i></span><span class="step-title">看价钱，开拍</span><span class="step-sum"></span><span class="step-edit">展开<i data-ico="chev"></i></span></button>
+    <div class="step-wrap"><div class="step-body"><div class="step-in" id="s4in"></div></div></div>
+  </section>
+
+  <section class="step" id="s5" data-s="locked">
+    <button class="step-head"><span class="step-num"><span>5</span><i data-ico="check"></i></span><span class="step-title">拍摄中</span><span class="step-sum"></span><span class="step-edit">展开<i data-ico="chev"></i></span></button>
+    <div class="step-wrap"><div class="step-body"><div class="step-in" id="s5in"></div></div></div>
+  </section>
+
+  <section class="step" id="s6" data-s="locked">
+    <button class="step-head"><span class="step-num"><span>6</span><i data-ico="check"></i></span><span class="step-title">对着原片挑</span><span class="step-sum"></span><span class="step-edit">展开<i data-ico="chev"></i></span></button>
+    <div class="step-wrap"><div class="step-body"><div class="step-in" id="s6in"></div></div></div>
+  </section>
+</main>
+
+<footer class="dock"><div class="dock-in">
+  <div class="dock-step"><b id="dkN">1 / 6</b><span id="dkT">传原片</span></div>
+  <div class="dock-hint" id="dkH" role="status"></div>
+  <div class="dock-act"><button class="btn ghost" id="dkS" hidden></button><button class="btn primary" id="dkP">选择原片</button></div>
+</div></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="设置" aria-hidden="true" inert>
+  <header><h2>设置</h2><button class="tbtn" id="setClose" aria-label="关闭设置"><i data-ico="x"></i></button></header>
+  <div class="body" id="setBody"></div>
+</aside>
+
+<dialog class="ask" id="ask"></dialog>
+<div class="dropveil" id="dropveil" hidden><div><i data-ico="upload"></i><strong>松手，就传这条原片</strong></div></div>
+<div class="errs" id="errs" aria-live="assertive"></div>
+<div class="toast" id="toast" role="status"></div>
+<input type="file" id="pickVideo" accept="video/mp4,video/quicktime,.mp4,.mov,.m4v" hidden>
+<input type="file" id="pickImage" accept="image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp" hidden>
+
+<script src="app.js"></script>
+</body>
+</html>

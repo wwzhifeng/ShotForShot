@@ -1,0 +1,4 @@
+# bat 必须是 CRLF（cmd.exe 按 LF 解析会出错）
+*.bat text eol=crlf
+*.png binary
+*.woff binary

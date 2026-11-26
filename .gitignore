@@ -1,0 +1,36 @@
+# ===== 密钥和个人数据：绝不进仓库 =====
+设置/
+*密钥*
+*.key
+.env
+.env.*
+
+# ===== 运行时生成 =====
+作品/
+缓存/
+日志/
+
+# ===== 安装包里的大文件（从 Releases 安装包拷过来，不进仓库）=====
+runtime/
+换脸引擎/
+示例/
+程序/models/*.onnx
+程序/web/dev-assets/
+程序/web/dev-fake-api.js
+
+# ===== Python / 编辑器 =====
+__pycache__/
+*.pyc
+*.pyd
+.venv/
+venv/
+.vscode/
+.idea/
+*.log
+
+# ===== 媒体和压缩包 =====
+*.mp4
+*.mov
+*.wav
+*.zip
+*.7z
